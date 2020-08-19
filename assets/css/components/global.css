@@ -21,7 +21,9 @@
 }
 
 .post-feed {
-    margin-top: 3vw;
+    padding-top: 3vw;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .site-head-container {
@@ -30,17 +32,18 @@
 
 .numbers {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 100%;
     flex-wrap: wrap;
-    padding: 45px 0;
+    padding: 3vw 0;
     margin-bottom: -10px;
 }
 
 .numbers > * {
-    width: 33%;
     padding: 0px 10px;
     text-align: center;
-    min-width: 170px;
+    flex-basis: 0;
+    flex-grow: 1;
     margin-bottom: 10px;
 }
 
