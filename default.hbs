@@ -39,7 +39,9 @@
                 </nav>
                 <div class="site-head-center">
                     {{#if @site.logo}}
-                    <img class="site-head-logo-image" src="{{@site.logo}}" alt="{{@site.title}}" />
+                    <a href="{{@site.url}}" class="site-head-logo-image">
+                        <img class="site-head-logo-image" src="{{@site.logo}}" alt="{{@site.title}}" />
+                    </a>
                     {{else}}
                     <a class="site-head-logo" href="{{@site.url}}">
                         {{@site.title}}

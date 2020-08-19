@@ -14,7 +14,20 @@ into the {body} of the default.hbs template --}}
 
 <div class="post-feed">
     {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-    {{#get "posts" include="tags,authors" limit="all" filter="featured:true+tags:homepage" order="published_at desc" }}
+    {{#get "pages" id="5f39106c430f7be36893f0e7" include="tags,authors" as |post|}}
+    {{#post}}
+    {{!-- "Join Us" --}}
+    <article class="post-card {{post_class}}" style="background-image: url({{img_url feature_image size="l"}})">
+        <a class="post-card-link" href="{{url}}">
+            <div class="post-card-content">
+                {{!-- Commenting this out. In the future, this should probably be some SVG text --}}
+                <!-- <h2 class="post-card-title">{{title}}</h2> -->
+            </div>
+        </a>
+    </article>
+    {{/post}}
+    {{/get}}
+    {{#get "posts" include="tags,authors" limit="1" filter="featured:true+tags:homepage" order="published_at desc" }}
     {{#foreach posts}}
     {{> "post-card"}}
     {{/foreach}}
