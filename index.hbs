@@ -14,10 +14,49 @@ into the {body} of the default.hbs template --}}
 
 <div class="post-feed">
     {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-    {{#get "pages" id="5f39106c430f7be36893f0e7" include="tags,authors" as |post|}}
+    {{#get "pages" id="5f39106c430f7be36893f0e7" as |post|}}
     {{#post}}
     {{!-- "Join Us" --}}
-    <article class="post-card {{post_class}}" style="background-image: url({{img_url feature_image size="l"}})">
+    <article class="post-card {{post_class}} w1_3" style="background-image: url({{img_url feature_image size="l"}})">
+        <a class="post-card-link" href="{{url}}">
+            <div class="post-card-content">
+                {{!-- Commenting this out. In the future, this should probably be some SVG text --}}
+                <!-- <h2 class="post-card-title">{{title}}</h2> -->
+            </div>
+        </a>
+    </article>
+    {{/post}}
+    {{/get}}
+    {{#get "pages" id="5f3d75261e39e2f14d393271" as |post|}}
+    {{#post}}
+    {{!-- "Sea Battle" --}}
+    <article class="post-card {{post_class}} w2_3" style="background-image: url({{img_url feature_image size="l"}})">
+        <a class="post-card-link" href="{{url}}">
+            <div class="post-card-content">
+                {{!-- Commenting this out. In the future, this should probably be some SVG text --}}
+                <!-- <h2 class="post-card-title">{{title}}</h2> -->
+            </div>
+        </a>
+    </article>
+    {{/post}}
+    {{/get}}
+    {{#get "pages" id="5f3d764f1e39e2f14d39327a" as |post|}}
+    {{#post}}
+    {{!-- "About us" --}}
+    <article class="post-card {{post_class}} w2_3" style="background-image: url({{img_url feature_image size="l"}})">
+        <a class="post-card-link" href="{{url}}">
+            <div class="post-card-content">
+                {{!-- Commenting this out. In the future, this should probably be some SVG text --}}
+                <!-- <h2 class="post-card-title">{{title}}</h2> -->
+            </div>
+        </a>
+    </article>
+    {{/post}}
+    {{/get}}
+    {{#get "pages" id="5f3d772d1e39e2f14d39328b" as |post|}}
+    {{#post}}
+    {{!-- "Our causes and projects" --}}
+    <article class="post-card {{post_class}} w1_3" style="background-image: url({{img_url feature_image size="l"}})">
         <a class="post-card-link" href="{{url}}">
             <div class="post-card-content">
                 {{!-- Commenting this out. In the future, this should probably be some SVG text --}}
@@ -29,13 +68,37 @@ into the {body} of the default.hbs template --}}
     {{/get}}
     {{#get "posts" include="tags,authors" limit="1" filter="featured:true+tags:homepage" order="published_at desc" }}
     {{#foreach posts}}
+    {{!-- Latest blog post --}}
     {{> "post-card"}}
     {{/foreach}}
     {{/get}}
-    {{#get "posts" include="tags,authors" limit="all" filter="featured:false+tags:homepage" order="published_at desc" }}
-    {{#foreach posts}}
-    {{> "post-card"}}
-    {{/foreach}}
+    {{#get "pages" id="5f3d7ce01e39e2f14d3932c6" as |post|}}
+    {{#post}}
+    {{!-- "Current partners" --}}
+    <article class="post-card left-half {{post_class}}"
+        style="background-image: url({{img_url feature_image size="l"}})">
+        <a class="post-card-link" href="{{url}}">
+            <div class="post-card-content">
+                {{!-- Commenting this out. In the future, this should probably be some SVG text --}}
+                <!-- <h2 class="post-card-title">{{title}}</h2> -->
+            </div>
+        </a>
+    </article>
+    {{/post}}
+    {{/get}}
+    {{#get "pages" id="5f3d799f1e39e2f14d393295" as |post|}}
+    {{#post}}
+    {{!-- "Become a partner" --}}
+    <article class="post-card right-half {{post_class}}"
+        style="background-image: url({{img_url feature_image size="l"}})">
+        <a class="post-card-link" href="{{url}}">
+            <div class="post-card-content">
+                {{!-- Commenting this out. In the future, this should probably be some SVG text --}}
+                <!-- <h2 class="post-card-title">{{title}}</h2> -->
+            </div>
+        </a>
+    </article>
+    {{/post}}
     {{/get}}
     <div class="numbers">
         <div class="number-box">
