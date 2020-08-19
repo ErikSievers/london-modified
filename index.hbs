@@ -13,8 +13,7 @@ into the {body} of the default.hbs template --}}
 {{/is}}
 
 <div class="post-feed">
-    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-    {{#get "pages" id="5f39106c430f7be36893f0e7" as |post|}}
+    {{#get "pages" slug="join-us" as |post|}}
     {{#post}}
     {{!-- "Join Us" --}}
     <article class="post-card {{post_class}} w1_3" style="background-image: url({{img_url feature_image size="l"}})">
@@ -27,7 +26,7 @@ into the {body} of the default.hbs template --}}
     </article>
     {{/post}}
     {{/get}}
-    {{#get "pages" id="5f3d75261e39e2f14d393271" as |post|}}
+    {{#get "pages" slug="sea-battle" as |post|}}
     {{#post}}
     {{!-- "Sea Battle" --}}
     <article class="post-card {{post_class}} w2_3" style="background-image: url({{img_url feature_image size="l"}})">
@@ -40,7 +39,7 @@ into the {body} of the default.hbs template --}}
     </article>
     {{/post}}
     {{/get}}
-    {{#get "pages" id="5f3d764f1e39e2f14d39327a" as |post|}}
+    {{#get "pages" slug="about-us" as |post|}}
     {{#post}}
     {{!-- "About us" --}}
     <article class="post-card {{post_class}} w2_3" style="background-image: url({{img_url feature_image size="l"}})">
@@ -53,7 +52,7 @@ into the {body} of the default.hbs template --}}
     </article>
     {{/post}}
     {{/get}}
-    {{#get "pages" id="5f3d772d1e39e2f14d39328b" as |post|}}
+    {{#get "pages" slug="our-causes-and-projects" as |post|}}
     {{#post}}
     {{!-- "Our causes and projects" --}}
     <article class="post-card {{post_class}} w1_3" style="background-image: url({{img_url feature_image size="l"}})">
@@ -66,13 +65,13 @@ into the {body} of the default.hbs template --}}
     </article>
     {{/post}}
     {{/get}}
-    {{#get "posts" include="tags,authors" limit="1" filter="featured:true+tags:homepage" order="published_at desc" }}
+    {{#get "posts" limit="1" order="published_at desc" }}
     {{#foreach posts}}
     {{!-- Latest blog post --}}
     {{> "post-card"}}
     {{/foreach}}
     {{/get}}
-    {{#get "pages" id="5f3d7ce01e39e2f14d3932c6" as |post|}}
+    {{#get "pages" slug="current-partners" as |post|}}
     {{#post}}
     {{!-- "Current partners" --}}
     <article class="post-card left-half {{post_class}}"
@@ -86,7 +85,7 @@ into the {body} of the default.hbs template --}}
     </article>
     {{/post}}
     {{/get}}
-    {{#get "pages" id="5f3d799f1e39e2f14d393295" as |post|}}
+    {{#get "pages" slug="become-a-partner" as |post|}}
     {{#post}}
     {{!-- "Become a partner" --}}
     <article class="post-card right-half {{post_class}}"
