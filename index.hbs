@@ -16,7 +16,8 @@ into the {body} of the default.hbs template --}}
     {{#get "pages" slug="join-us" as |post|}}
     {{#post}}
     {{!-- "Join Us" --}}
-    <article class="post-card {{post_class}} w1_3" style="background-image: url({{img_url feature_image size="l"}})">
+    <article class="post-card {{post_class}} w1_3"
+        style="background-image: url(../../assets/Join_Us_Text.png), url({{img_url feature_image size="l"}})">
         <a class="post-card-link" href="{{url}}">
             <div class="post-card-content">
                 {{!-- Commenting this out. In the future, this should probably be some SVG text --}}
@@ -29,7 +30,8 @@ into the {body} of the default.hbs template --}}
     {{#get "pages" slug="sea-battle" as |post|}}
     {{#post}}
     {{!-- "Sea Battle" --}}
-    <article class="post-card {{post_class}} w2_3" style="background-image: url({{img_url feature_image size="l"}})">
+    <article id="sb" class="post-card {{post_class}} w2_3"
+        style="background-image: url(../../assets/Sea_Battle_Text.png), url({{img_url feature_image size="l"}})">
         <a class="post-card-link" href="{{url}}">
             <div class="post-card-content">
                 {{!-- Commenting this out. In the future, this should probably be some SVG text --}}
@@ -42,7 +44,8 @@ into the {body} of the default.hbs template --}}
     {{#get "pages" slug="about-us" as |post|}}
     {{#post}}
     {{!-- "About us" --}}
-    <article class="post-card {{post_class}} w2_3" style="background-image: url({{img_url feature_image size="l"}})">
+    <article class="post-card {{post_class}} w2_3"
+        style="background-image: url(../../assets/About_Us_Text.png), url({{img_url feature_image size="l"}})">
         <a class="post-card-link" href="{{url}}">
             <div class="post-card-content">
                 {{!-- Commenting this out. In the future, this should probably be some SVG text --}}
@@ -55,7 +58,8 @@ into the {body} of the default.hbs template --}}
     {{#get "pages" slug="our-causes-and-projects" as |post|}}
     {{#post}}
     {{!-- "Our causes and projects" --}}
-    <article class="post-card {{post_class}} w1_3" style="background-image: url({{img_url feature_image size="l"}})">
+    <article class="post-card {{post_class}} w1_3"
+        style="background-image: url(../../assets/Causes_Projects_Text.png), url({{img_url feature_image size="l"}})">
         <a class="post-card-link" href="{{url}}">
             <div class="post-card-content">
                 {{!-- Commenting this out. In the future, this should probably be some SVG text --}}
@@ -74,8 +78,8 @@ into the {body} of the default.hbs template --}}
     {{#get "pages" slug="current-partners" as |post|}}
     {{#post}}
     {{!-- "Current partners" --}}
-    <article class="post-card left-half {{post_class}}"
-        style="background-image: url({{img_url feature_image size="l"}})">
+    <article id="cp" class="post-card left-half {{post_class}}"
+        style="background-image: url(../../assets/Current_Partner_Text.png), url({{img_url feature_image size="l"}})">
         <a class="post-card-link" href="{{url}}">
             <div class="post-card-content">
                 {{!-- Commenting this out. In the future, this should probably be some SVG text --}}
@@ -88,8 +92,8 @@ into the {body} of the default.hbs template --}}
     {{#get "pages" slug="become-a-partner" as |post|}}
     {{#post}}
     {{!-- "Become a partner" --}}
-    <article class="post-card right-half {{post_class}}"
-        style="background-image: url({{img_url feature_image size="l"}})">
+    <article id="bp" class="post-card right-half {{post_class}}"
+        style="background-image: url(../../assets/Become_Partner_Text.png), url({{img_url feature_image size="l"}})">
         <a class="post-card-link" href="{{url}}">
             <div class="post-card-content">
                 {{!-- Commenting this out. In the future, this should probably be some SVG text --}}

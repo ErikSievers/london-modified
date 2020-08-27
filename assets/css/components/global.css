@@ -10,6 +10,16 @@
     left: -3vw;
 }
 
+#bp {
+    background-size: 50%, auto 100%;
+    background-repeat: no-repeat;
+}
+
+#cp {
+    background-size: 50%, auto 100%;
+    background-repeat: no-repeat;
+}
+
 .site-head-logo-image {
     height: 120px;
     padding: 10px;
@@ -77,14 +87,13 @@
 .w3_3.w3_3 {
     flex: 3 3 100%;
 }
-
 .right-half.right-half {
     border-left: none;
-    background-position: right;
+    background-position: 65%, left;
 }
 .left-half.left-half {
     border-right: none;
-    background-position: right;
+    background-position: 35%, right;
 }
 
 /* End of changes */
